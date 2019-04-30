@@ -39,11 +39,11 @@
 
         <p>
           <label for="rpm">Record RPM: </label>
-          <select id="role" name="role" required>
+          <select id="rpm" name="rpm" required>
             <option value="" hidden disabled selected>Select a play speed</option>
-            <option value="driver">33 1/3</option>
-            <option value="enforcer">45</option>
-            <option value="sevp-drug">78</option>
+            <option value="33 1/3">33 1/3</option>
+            <option value="45">45</option>
+            <option value="78">78</option>
           </select>
         </p>
       </section>
@@ -173,15 +173,26 @@
         </fieldset>
       </section>
       <section>
-        <p>
-          <label for="rate-decision">Would you like to rate </label>
-          <input id="rate-decison" name="rate-decision" value="yes" type="checkbox">
-        </p>
+        <fieldset>
+          <legend>Would you like to rate the album?</legend>
 
-        <p>
-          <label for="rate-score">Rating:</label>
-          <input type="range" name="rate-score" id="enjoyment" min="1" max="10" default="10">
-        </p>
+          <div>
+            <input required type="radio" id="yes" value="yes" name="rating-decision">
+            <label for="yes">Yes</label>
+          </div>
+
+          <div>
+            <input required type="radio" id="no" value="no" name="rating-decision">
+            <label for="no">No</label>
+          </div>
+
+          <div>
+            <label for="rating-score">Rating:</label>
+            <input type="range" name="rating-score" id="rating-score" min="1" max="10" default="10">
+          </div>
+        </fieldset>
+
+
       </section>
       <section>
         <button>Submit</button>

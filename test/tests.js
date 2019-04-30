@@ -69,3 +69,28 @@ test('Test a normal record entry with no rating expect no ratingScore property',
   //Assert
   assert.deepEqual(result, expected);
 });
+
+test('Test a normal record entry with no rating expect no ratingScore property', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const record = { artistName: 'Nick Hakim' };
+
+  //Act 
+  // Call the function you're testing and set the result to a const
+  recordApi.save(record);
+  const result = recordApi.get();
+  //Assert
+  assert.deepEqual(result, record);
+});
+
+const recordApi = {
+  save(record) {
+    const recordData = JSON.stringify(record);
+    localStorage.setItem('record', recordData);
+  },
+  get() {
+    const recordData = localStorage.getItem('record');
+    const record = JSON.parse(recordData);
+    return record;
+  }
+};

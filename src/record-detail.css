@@ -1,0 +1,25 @@
+body {
+  text-align: left;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  background-color: rgba(205, 205, 206, 0.781);
+}
+
+dt {
+  margin: 2px;
+  padding: 10px;
+  background-color: rgba(60, 60, 252, 0.514);
+  text-align: right;
+}
+
+dt:after {
+  content: ':'
+}
+
+dd {
+  margin: 2px;
+  padding: 10px;
+}

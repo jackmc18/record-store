@@ -2,8 +2,8 @@ body {
   text-align: center;
   background-image: url('../assets/record-player.jpg');
   background-repeat: no-repeat;
-background-size: 100% 100%;
-  
+  background-size: 100%;
+  background-color: rgb(8, 8, 8);
 }
 
 fieldset {
@@ -16,5 +16,5 @@ form {
   width: 20em;
   margin: 0 auto 50px auto;
   padding: 20px;
-  background-color: rgba(121, 121, 121, 0.5) ;
+  background-color: rgba(196, 195, 195, 0.5) ;
 }

@@ -8,6 +8,7 @@ function getRecordEntry(formData) {
     recordColor: formData.get('color'),
     recordRPM: formData.get('rpm'),
     recordCondition: formData.get('condition'),
+    jacketCondition: formData.get('jacket-condition'),
     recordGenre: formData.getAll('genre'),
     ratingDecision: willRate
   };

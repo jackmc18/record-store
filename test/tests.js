@@ -11,6 +11,7 @@ test('Test a normal record entry and expect the formated version', assert => {
     recordColor: 'Milky White',
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
+    jacketCondition: 'There is a small crease in the top left corner.',
     recordGenre: ['electronic', 'funk-soul'],
     ratingDecision: true,
     ratingScore: 9
@@ -23,6 +24,7 @@ test('Test a normal record entry and expect the formated version', assert => {
   formData.set('color', expected.recordColor);
   formData.set('rpm', expected.recordRPM);
   formData.set('condition', expected.recordCondition);
+  formData.set('jacket-condition', expected.jacketCondition);
   formData.set('genre', expected.recordGenre[0]);
   formData.append('genre', expected.recordGenre[1]);
   formData.set('rating-decision', 'yes');
@@ -44,6 +46,7 @@ test('Test a normal record entry with no rating expect no ratingScore property',
     recordColor: 'Milky White',
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
+    jacketCondition: 'There is a small crease in the top left corner.',
     recordGenre: ['electronic', 'funk-soul'],
     ratingDecision: false
   };
@@ -55,6 +58,7 @@ test('Test a normal record entry with no rating expect no ratingScore property',
   formData.set('color', expected.recordColor);
   formData.set('rpm', expected.recordRPM);
   formData.set('condition', expected.recordCondition);
+  formData.set('jacket-condition', expected.jacketCondition);
   formData.set('genre', expected.recordGenre[0]);
   formData.append('genre', expected.recordGenre[1]);
   formData.set('rating-decision', 'no');

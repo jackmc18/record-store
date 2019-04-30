@@ -25,3 +25,8 @@ form {
 h1, h2 {
   font-family: Artifika, sans-serif;
 }
+
+textarea {
+  width: 10em;
+  margin-top: 1em;
+}

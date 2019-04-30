@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Artifika|Karla');
+
 body {
   text-align: center;
   background-image: url('../assets/record-player.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(8, 8, 8);
+  font-family: Karla, sans-serif;
+}
+
+h1, h2 {
+  font-family: Artifika, sans-serif;
 }

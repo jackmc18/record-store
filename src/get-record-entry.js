@@ -1,6 +1,10 @@
 function getRecordEntry(formData) {
   const willRate = formData.get('rating-decision') === 'yes';
-  const score = parseInt(formData.get('rating-score'));
+  let score = NaN;
+
+  if(willRate) {
+    score = parseInt(formData.get('rating-score'));
+  }
 
   const record = {
     albumTitle: formData.get('album-title'),

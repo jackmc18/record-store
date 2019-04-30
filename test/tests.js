@@ -34,7 +34,7 @@ test('Test a normal record entry and expect the formated version', assert => {
   assert.deepEqual(result, expected);
 });
 
-test('Test a normal record entry with no rating expect NaN for ratingScore', assert => {
+test('Test a normal record entry with no rating expect no ratingScore property', assert => {
   //Arrange
   // Set up your parameters and expectations
   const expected = {
@@ -45,8 +45,7 @@ test('Test a normal record entry with no rating expect NaN for ratingScore', ass
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
     recordGenre: ['electronic', 'funk-soul'],
-    ratingDecision: false,
-    ratingScore: NaN
+    ratingDecision: false
   };
 
   const formData = new FormData();

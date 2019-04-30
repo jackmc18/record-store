@@ -1,10 +1,5 @@
 function getRecordEntry(formData) {
   const willRate = formData.get('rating-decision') === 'yes';
-  let score = NaN;
-
-  if(willRate) {
-    score = parseInt(formData.get('rating-score'));
-  }
 
   const record = {
     albumTitle: formData.get('album-title'),
@@ -14,9 +9,14 @@ function getRecordEntry(formData) {
     recordRPM: formData.get('rpm'),
     recordCondition: formData.get('condition'),
     recordGenre: formData.getAll('genre'),
-    ratingDecision: willRate,
-    ratingScore: score
+    ratingDecision: willRate
   };
+
+  if(willRate) {
+    let score = parseInt(formData.get('rating-score'));
+    record.ratingScore = score;
+  }
+
   return record;
 }
 

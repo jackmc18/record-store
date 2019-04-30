@@ -12,3 +12,31 @@ body {
 h1, h2 {
   font-family: Artifika, sans-serif;
 }
+
+button {
+  height: 5em;
+  width: 15em;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  border-color: black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+section {
+  width: 30em;
+  margin:  10em auto;
+  padding: 20px;
+  background-color: rgba(126, 126, 126, 0.603) ;
+}

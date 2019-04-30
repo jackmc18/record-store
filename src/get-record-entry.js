@@ -13,7 +13,7 @@ function getRecordEntry(formData) {
     recordColor: formData.get('color'),
     recordRPM: formData.get('rpm'),
     recordCondition: formData.get('condition'),
-    recordGenere: formData.getAll('genere'),
+    recordGenre: formData.getAll('genre'),
     ratingDecision: willRate,
     ratingScore: score
   };

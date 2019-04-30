@@ -11,7 +11,7 @@ test('Test a normal record entry and expect the formated version', assert => {
     recordColor: 'Milky White',
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
-    recordGenere: ['electronic', 'funk-soul'],
+    recordGenre: ['electronic', 'funk-soul'],
     ratingDecision: true,
     ratingScore: 9
   };
@@ -23,8 +23,8 @@ test('Test a normal record entry and expect the formated version', assert => {
   formData.set('color', expected.recordColor);
   formData.set('rpm', expected.recordRPM);
   formData.set('condition', expected.recordCondition);
-  formData.set('genere', expected.recordGenere[0]);
-  formData.append('genere', expected.recordGenere[1]);
+  formData.set('genre', expected.recordGenre[0]);
+  formData.append('genre', expected.recordGenre[1]);
   formData.set('rating-decision', 'yes');
   formData.set('rating-score', '9');
   //Act 
@@ -44,7 +44,7 @@ test('Test a normal record entry with no rating expect NaN for ratingScore', ass
     recordColor: 'Milky White',
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
-    recordGenere: ['electronic', 'funk-soul'],
+    recordGenre: ['electronic', 'funk-soul'],
     ratingDecision: false,
     ratingScore: NaN
   };
@@ -56,8 +56,8 @@ test('Test a normal record entry with no rating expect NaN for ratingScore', ass
   formData.set('color', expected.recordColor);
   formData.set('rpm', expected.recordRPM);
   formData.set('condition', expected.recordCondition);
-  formData.set('genere', expected.recordGenere[0]);
-  formData.append('genere', expected.recordGenere[1]);
+  formData.set('genre', expected.recordGenre[0]);
+  formData.append('genre', expected.recordGenre[1]);
   formData.set('rating-decision', 'no');
   formData.set('rating-score', '5');
   //Act 

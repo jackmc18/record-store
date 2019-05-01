@@ -2,10 +2,16 @@ body {
   text-align: left;
 }
 
+h1 {
+  text-align: center;
+}
+
 dl {
   display: grid;
+  margin: auto;
   grid-template-columns: max-content 1fr;
   background-color: rgba(205, 205, 206, 0.781);
+  padding: 10px;
 }
 
 dt {
@@ -22,4 +28,10 @@ dt:after {
 dd {
   margin: 2px;
   padding: 10px;
+  margin: auto;
+}
+
+main {
+  width: max-content;
+  margin: auto;
 }

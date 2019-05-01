@@ -15,7 +15,7 @@ const record = recordApi.get();
 if(!record) {
   window.location = './';
 }
-console.log(record);
+
 albumTitle.textContent = record.albumTitle;
 artistName.textContent = record.artistName;
 catalogNumber.textContent = record.catalogNumber;

@@ -28,7 +28,7 @@ dt:after {
 dd {
   margin: 2px;
   padding: 10px;
-  margin: auto;
+  text-align: left;
 }
 
 main {

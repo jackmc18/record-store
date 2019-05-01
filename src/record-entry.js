@@ -1,4 +1,5 @@
 import getRecordEntry from './get-record-entry.js';
+import recordApi from './record-api.js';
 
 const form = document.getElementById('record-entry');
 const ratingScore = document.getElementById('rating-score');
@@ -8,8 +9,9 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const formData = new FormData(form);
-
-  console.log(getRecordEntry(formData));
+  const record = getRecordEntry(formData);
+  recordApi.save(record);
+  console.log(record);
 });
 
 ratingScore.addEventListener('change', () => {

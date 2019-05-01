@@ -12,21 +12,27 @@ const rating = document.getElementById('rating-score');
 
 const record = recordApi.get();
 
-if(!record) {
+if(!record.albumTitle) {
   window.location = './';
 }
-
-albumTitle.textContent = record.albumTitle;
-artistName.textContent = record.artistName;
-catalogNumber.textContent = record.catalogNumber;
-color.textContent = record.recordColor;
-rpm.textContent = record.recordRPM;
-condition.textContent = record.recordCondition;
-jacketCondition.textContent = record.jacketCondition;
-genre.textContent = record.recordGenre.join(', ');
-if(record.ratingDecision) {
-  rating.textContent = record.ratingScore;
-}
 else {
-  rating.textContent = 'none';
+  albumTitle.textContent = record.albumTitle;
+  artistName.textContent = record.artistName;
+  catalogNumber.textContent = record.catalogNumber;
+  color.textContent = record.recordColor;
+  rpm.textContent = record.recordRPM;
+  condition.textContent = record.recordCondition;
+  jacketCondition.textContent = record.jacketCondition;
+
+  if(record.genre) {
+    genre.textContent = record.recordGenre.join(', ');
+  }
+
+  if(record.ratingDecision) {
+    rating.textContent = record.ratingScore;
+  }
+  else {
+    rating.textContent = 'none';
+  }
 }
+

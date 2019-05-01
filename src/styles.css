@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Artifika|Karla');
+
+body {
+  text-align: center;
+  background-image: url('../assets/record-player.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(8, 8, 8);
+  font-family: Karla, sans-serif;
+}
+
+h1, h2 {
+  font-family: Artifika, sans-serif;
+}
+
+button {
+  height: 5em;
+  width: 15em;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  border-color: black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+section {
+  width: 30em;
+  margin:  10em auto;
+  padding: 20px;
+  background-color: rgba(126, 126, 126, 0.603) ;
+}

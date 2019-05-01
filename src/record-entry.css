@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Artifika|Karla');
 
-body {
-  text-align: center;
-  background-image: url('../assets/record-player.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: rgb(8, 8, 8);
-  font-family: Karla, sans-serif;
-}
-
 fieldset {
   width: 15em;
   text-align: left;

@@ -12,6 +12,7 @@ form.addEventListener('submit', (event) => {
   const record = makeRecordEntry(formData);
   recordApi.save(record);
   console.log(record);
+  window.location = '../record-entry-thanks.html';
 });
 
 ratingScore.addEventListener('change', () => {

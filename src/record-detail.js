@@ -23,8 +23,7 @@ else {
   rpm.textContent = record.recordRPM;
   condition.textContent = record.recordCondition;
   jacketCondition.textContent = record.jacketCondition;
-
-  if(record.genre) {
+  if(record.recordGenre) {
     genre.textContent = record.recordGenre.join(', ');
   }
 

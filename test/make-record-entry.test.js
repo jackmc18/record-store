@@ -1,4 +1,4 @@
-import getRecordEntry from '../src/get-record-entry.js';
+import makeRecordEntry from '../src/make-record-entry.js';
 
 const test = QUnit.test;
 QUnit.module('record entry');
@@ -33,7 +33,7 @@ test('Test a normal record entry and expect the formated version', assert => {
   formData.set('rating-score', '9');
   //Act 
   // Call the function you're testing and set the result to a const
-  const result = getRecordEntry(formData);
+  const result = makeRecordEntry(formData);
   //Assert
   assert.deepEqual(result, expected);
 });
@@ -67,7 +67,7 @@ test('Test a normal record entry with no rating expect no ratingScore property',
   formData.set('rating-score', '5');
   //Act 
   // Call the function you're testing and set the result to a const
-  const result = getRecordEntry(formData);
+  const result = makeRecordEntry(formData);
   //Assert
   assert.deepEqual(result, expected);
 });

@@ -1,2 +1,2 @@
 import './record-api.test.js';
-import './record-entry.test.js';
+import './make-record-entry.test.js';

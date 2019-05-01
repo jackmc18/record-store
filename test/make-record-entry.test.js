@@ -14,7 +14,7 @@ test('Test a normal record entry and expect the formated version', assert => {
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
     jacketCondition: 'There is a small crease in the top left corner.',
-    recordGenre: ['electronic', 'funk-soul'],
+    recordGenre: ['Electronic', 'Funk/Soul'],
     ratingDecision: true,
     ratingScore: 9
   };
@@ -49,7 +49,7 @@ test('Test a normal record entry with no rating expect no ratingScore property',
     recordRPM: '33 1/3',
     recordCondition: 'Excellent',
     jacketCondition: 'There is a small crease in the top left corner.',
-    recordGenre: ['electronic', 'funk-soul'],
+    recordGenre: ['Electronic', 'Funk/Soul'],
     ratingDecision: false
   };
 

@@ -3,8 +3,11 @@ import recordApi from '../src/record-api.js';
 const test = QUnit.test;
 QUnit.module('record api');
 
+recordApi.storage = sessionStorage;
+const testStorage = sessionStorage;
+
 test('Test saving and getting a single record', assert => {
-  localStorage.removeItem('records');
+  testStorage.removeItem('records');
   //Arrange
   // Set up your parameters and expectations
   const record = { artistName: 'Nick Hakim' };
@@ -17,7 +20,7 @@ test('Test saving and getting a single record', assert => {
 });
 
 test('Test for nothing stored get an empty array back', assert => {
-  localStorage.removeItem('records');
+  testStorage.removeItem('records');
   //Arrange
   // Set up your parameters and expectations
   const expected = [];
@@ -29,7 +32,7 @@ test('Test for nothing stored get an empty array back', assert => {
 });
 
 test('Test 2 records in storage return 2 records', assert => {
-  localStorage.removeItem('records');
+  testStorage.removeItem('records');
   //Arrange
   // Set up your parameters and expectations
   const record1 = { record: 'Wish You Were Here' };

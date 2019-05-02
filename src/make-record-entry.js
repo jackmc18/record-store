@@ -1,4 +1,4 @@
-function getRecordEntry(formData) {
+function makeRecordEntry(formData) {
   const willRate = formData.get('rating-decision') === 'yes';
 
   const record = {
@@ -21,4 +21,4 @@ function getRecordEntry(formData) {
   return record;
 }
 
-export default getRecordEntry;
+export default makeRecordEntry;

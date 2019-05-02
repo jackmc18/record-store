@@ -1,12 +1,23 @@
 const recordApi = {
+  storage: localStorage,
   save(record) {
-    const recordData = JSON.stringify(record);
-    localStorage.setItem('record', recordData);
+    let records = recordApi.getAll();
+    records.push(record);
+    const recordsData = JSON.stringify(records);
+    recordApi.storage.setItem('records', recordsData);
   },
   get() {
-    const recordData = localStorage.getItem('record');
-    const record = JSON.parse(recordData);
-    return record;
+    const recordsData = recordApi.storage.getItem('records');
+    const records = JSON.parse(recordsData);
+    return records[0];
+  },
+  getAll() {
+    const recordsData = recordApi.storage.getItem('records');
+    let records = JSON.parse(recordsData);
+    if(!records) {
+      records = [];
+    }
+    return records;
   }
 };
 

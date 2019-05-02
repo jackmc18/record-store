@@ -14,12 +14,14 @@ h1, h2 {
 }
 
 button {
+  display: block;
   height: 5em;
   width: 15em;
   color: white;
   background-color: green;
   border-radius: 5px;
   border-color: black;
+  margin: 10px auto;
 }
 
 button:hover {
@@ -38,5 +40,5 @@ a:visited {
   width: 30em;
   margin:  10em auto;
   padding: 20px;
-  background-color: rgba(126, 126, 126, 0.603) ;
+  background-color: rgba(126, 126, 126, 0.603);
 }

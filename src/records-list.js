@@ -11,7 +11,7 @@ for(let i = 0; i < records.length; i++) {
   const link = document.createElement('a');
 
   const searchParams = new URLSearchParams();
-  searchParams.set('name', record.albumTitle);
+  searchParams.set('albumTitle', record.albumTitle);
   link.textContent = record.albumTitle;
   link.href = 'record-detail.html?' + searchParams.toString();
 

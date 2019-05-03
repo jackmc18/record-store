@@ -10,7 +10,10 @@ const jacketCondition = document.getElementById('jacket-condition');
 const genre = document.getElementById('genre');
 const rating = document.getElementById('rating-score');
 
-const record = recordApi.get();
+const searchParams = new URLSearchParams(window.location.search);
+const recordTitle = searchParams.get('albumTitle');
+
+const record = recordApi.get(recordTitle);
 
 if(!record.albumTitle) {
   window.location = './';

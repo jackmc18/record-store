@@ -8,15 +8,8 @@ for(let i = 0; i < records.length; i++) {
   const record = records[i];
   const tr = document.createElement('tr');
 
-  const link = document.createElement('a');
-
-  const searchParams = new URLSearchParams();
-  searchParams.set('name', record.albumTitle);
-  link.textContent = record.albumTitle;
-  link.href = 'record-detail.html?' + searchParams.toString();
-
   const titleCell = document.createElement('td');
-  titleCell.appendChild(link);
+  titleCell.textContent = record.albumTitle;
   tr.appendChild(titleCell);
 
   const artistCell = document.createElement('td');

@@ -1,10 +1,10 @@
 const recordApi = {
-  storage: localStorage,
+  key: 'records',
   save(record) {
     let records = recordApi.getAll();
     records.push(record);
     const recordsData = JSON.stringify(records);
-    recordApi.storage.setItem('records', recordsData);
+    localStorage.setItem(recordApi.key, recordsData);
   },
   get(albumTitle) {
     const records = recordApi.getAll();
@@ -16,7 +16,7 @@ const recordApi = {
     }
   },
   getAll() {
-    const recordsData = recordApi.storage.getItem('records');
+    const recordsData = localStorage.getItem(recordApi.key);
     let records = JSON.parse(recordsData);
     if(!records) {
       records = [];

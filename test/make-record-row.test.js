@@ -1,7 +1,7 @@
 import makeRecordRow from '../src/make-record-row.js';
 
 const test = QUnit.test;
-QUnit.module('record api');
+QUnit.module('record row');
 
 test('Test making a text cell', assert => {
   //Arrange
@@ -14,3 +14,16 @@ test('Test making a text cell', assert => {
   //Assert
   assert.deepEqual(result, expected);
 });
+
+test('Test making a list cell with two items', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const text = ['Rock', 'Funk/Soul'];
+  const expected = '<td>Rock, Funk/Soul</td>';
+  //Act 
+  // Call the function you're testing and set the result to a const
+  const result = makeRecordRow.makeListCell(text).outerHTML;
+  //Assert
+  assert.deepEqual(result, expected);
+});
+

@@ -1,8 +1,10 @@
 function makeListCell(list) {
   let listString = '';
+  console.log(list);
   if(list) {
     listString = list.join(', ');
   }
+  console.log(listString);
   return makeTextCell(listString);
 }
 

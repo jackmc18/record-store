@@ -10,30 +10,23 @@ for(let i = 0; i < records.length; i++) {
   const tr = document.createElement('tr');
 
   const titleCell = makeRecordRow.makeTitleCell(record.albumTitle);
-  tr.appendChild(titleCell);
-
   const artistCell = makeRecordRow.makeTextCell(record.artistName);
-  tr.appendChild(artistCell);
-
   const catalogNumCell = makeRecordRow.makeTextCell(record.catalogNumber);
-  tr.appendChild(catalogNumCell);
-
   const colorCell = makeRecordRow.makeTextCell(record.recordColor);
-  tr.appendChild(colorCell);
-
   const rmpCell = makeRecordRow.makeTextCell(record.recordRPM);
-  tr.appendChild(rmpCell);
-
   const conditionCell = makeRecordRow.makeTextCell(record.recordCondition);
-  tr.appendChild(conditionCell);
-
   const jacketCell = makeRecordRow.makeTextCell(record.jacketCondition);
-  tr.appendChild(jacketCell);
-
   const genreCell = makeRecordRow.makeListCell(record.recordGenre);
-  tr.appendChild(genreCell);
-
   const ratingCell = makeRecordRow.makeRatingCell(record.ratingScore);
+
+  tr.appendChild(titleCell);
+  tr.appendChild(artistCell);
+  tr.appendChild(catalogNumCell);
+  tr.appendChild(colorCell);
+  tr.appendChild(rmpCell);
+  tr.appendChild(conditionCell);
+  tr.appendChild(jacketCell);
+  tr.appendChild(genreCell);
   tr.appendChild(ratingCell);
 
   tbody.appendChild(tr);

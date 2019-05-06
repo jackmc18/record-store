@@ -27,3 +27,16 @@ test('Test making a list cell with two items', assert => {
   assert.deepEqual(result, expected);
 });
 
+test('Test making a rating cell', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const text = '10';
+  const expected = '<td>10</td>';
+  //Act 
+  // Call the function you're testing and set the result to a const
+  const result = makeRecordRow.makeRatingCell(text).outerHTML;
+  //Assert
+  assert.deepEqual(result, expected);
+});
+
+

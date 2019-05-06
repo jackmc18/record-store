@@ -50,3 +50,15 @@ test('Test making a rating cell with no rating', assert => {
   //Assert
   assert.deepEqual(result, expected);
 });
+
+test('Test making a title cell', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const text = 'Doris';
+  const expected = '<td><a href="record-detail.html?albumTitle=Doris">Doris</a></td>';
+  //Act 
+  // Call the function you're testing and set the result to a const
+  const result = makeRecordRow.makeTitleCell(text).outerHTML;
+  //Assert
+  assert.deepEqual(result, expected);
+});

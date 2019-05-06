@@ -1,4 +1,5 @@
 import recordApi from './record-api.js';
+import makeRecordRow from './make-record-row.js';
 
 const tbody = document.getElementById('records');
 
@@ -8,50 +9,24 @@ for(let i = 0; i < records.length; i++) {
   const record = records[i];
   const tr = document.createElement('tr');
 
-  const titleCell = document.createElement('td');
-  titleCell.textContent = record.albumTitle;
+  const titleCell = makeRecordRow.makeTitleCell(record.albumTitle);
+  const artistCell = makeRecordRow.makeTextCell(record.artistName);
+  const catalogNumCell = makeRecordRow.makeTextCell(record.catalogNumber);
+  const colorCell = makeRecordRow.makeTextCell(record.recordColor);
+  const rmpCell = makeRecordRow.makeTextCell(record.recordRPM);
+  const conditionCell = makeRecordRow.makeTextCell(record.recordCondition);
+  const jacketCell = makeRecordRow.makeTextCell(record.jacketCondition);
+  const genreCell = makeRecordRow.makeListCell(record.recordGenre);
+  const ratingCell = makeRecordRow.makeRatingCell(record.ratingScore);
+
   tr.appendChild(titleCell);
-
-  const artistCell = document.createElement('td');
-  artistCell.textContent = record.artistName;
   tr.appendChild(artistCell);
-
-  const catalogNumCell = document.createElement('td');
-  catalogNumCell.textContent = record.catalogNumber;
   tr.appendChild(catalogNumCell);
-
-  const colorCell = document.createElement('td');
-  colorCell.textContent = record.recordColor;
   tr.appendChild(colorCell);
-
-  const rmpCell = document.createElement('td');
-  rmpCell.textContent = record.recordRPM;
   tr.appendChild(rmpCell);
-
-  const conditionCell = document.createElement('td');
-  conditionCell.textContent = record.recordCondition;
   tr.appendChild(conditionCell);
-
-  const jacketCell = document.createElement('td');
-  jacketCell.textContent = record.jacketCondition;
   tr.appendChild(jacketCell);
-
-  const genreCell = document.createElement('td');
-  let genreList = '';
-  if(record.recordGenre) {
-    genreList = record.recordGenre.join(', ');
-  }
-  genreCell.textContent = genreList;
   tr.appendChild(genreCell);
-
-  const ratingCell = document.createElement('td');
-  let rating = '';
-  if(record.ratingScore) {
-    rating = record.ratingScore;
-  } else {
-    rating = 'none';
-  }
-  ratingCell.textContent = rating;
   tr.appendChild(ratingCell);
 
   tbody.appendChild(tr);

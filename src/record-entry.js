@@ -11,7 +11,6 @@ form.addEventListener('submit', (event) => {
   const formData = new FormData(form);
   const record = makeRecordEntry(formData);
   recordApi.save(record);
-  console.log(record);
   window.location = '../record-entry-thanks.html';
 });
 

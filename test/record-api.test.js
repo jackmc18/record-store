@@ -3,24 +3,26 @@ import recordApi from '../src/record-api.js';
 const test = QUnit.test;
 QUnit.module('record api');
 
-recordApi.storage = sessionStorage;
-const testStorage = sessionStorage;
+const key = 'test-records';
+recordApi.key = key;
 
-test('Test saving and getting a single record', assert => {
-  testStorage.removeItem('records');
+test('Test saving two records and get the second one back', assert => {
+  localStorage.removeItem(key);
   //Arrange
   // Set up your parameters and expectations
-  const record = { artistName: 'Nick Hakim' };
+  const record1 = { albumTitle: 'Where Will We Go Part 1 & 2' };
+  const record2 = { albumTitle: 'Wolfmother' };
+  recordApi.save(record1);
+  recordApi.save(record2);
   //Act 
   // Call the function you're testing and set the result to a const
-  recordApi.save(record);
-  const result = recordApi.get();
+  const result = recordApi.get(record2.albumTitle);
   //Assert
-  assert.deepEqual(result, record);
+  assert.deepEqual(result, record2);
 });
 
 test('Test for nothing stored get an empty array back', assert => {
-  testStorage.removeItem('records');
+  localStorage.removeItem(key);
   //Arrange
   // Set up your parameters and expectations
   const expected = [];
@@ -32,7 +34,7 @@ test('Test for nothing stored get an empty array back', assert => {
 });
 
 test('Test 2 records in storage return 2 records', assert => {
-  testStorage.removeItem('records');
+  localStorage.removeItem(key);
   //Arrange
   // Set up your parameters and expectations
   const record1 = { record: 'Wish You Were Here' };

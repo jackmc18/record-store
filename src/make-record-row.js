@@ -1,16 +1,14 @@
 function makeListCell(list) {
   let listString = '';
-  console.log(list);
-  if (list) {
+  if(list) {
     listString = list.join(', ');
   }
-  console.log(listString);
   return makeTextCell(listString);
 }
 
 function makeRatingCell(rating) {
   let ratingString = '';
-  if (rating) {
+  if(rating) {
     ratingString = rating;
   } else {
     ratingString = 'none';

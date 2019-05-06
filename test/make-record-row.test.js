@@ -39,4 +39,14 @@ test('Test making a rating cell', assert => {
   assert.deepEqual(result, expected);
 });
 
-
+test('Test making a rating cell with no rating', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const text = '';
+  const expected = '<td>none</td>';
+  //Act 
+  // Call the function you're testing and set the result to a const
+  const result = makeRecordRow.makeRatingCell(text).outerHTML;
+  //Assert
+  assert.deepEqual(result, expected);
+});
